@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meeting Scheduler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Meeting Scheduler</h1>
+    <form id="meetingForm">
+      <input type="text" id="meetingTitle" placeholder="Meeting Title" required>
+      <input type="datetime-local" id="meetingDateTime" required>
+      <input type="text" id="participants" placeholder="Participants" required>
+      <input type="text" id="location" placeholder="Location" required>
+      <button type="submit" id="scheduleMeeting">Schedule</button>
+    </form>
+    <div id="message"></div>
+    <hr>
+    <h2>Scheduled Meetings</h2>
+    <ul id="meetingsList"></ul>
+    <button id="confirmRemove" style="display: none;">Confirm</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
