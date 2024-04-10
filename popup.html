@@ -1,37 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meeting Scheduler</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meeting Scheduler</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="bg-gray-100 h-screen flex flex-col justify-center items-center">
-    <div class="container mx-auto p-6 bg-white rounded-lg shadow-lg">
-        <h1 class="text-3xl font-semibold mb-4 text-center">Meeting Scheduler</h1>
-        <form id="meetingForm" class="mb-4">
-            <input type="text" id="meetingTitle" placeholder="Meeting Title" required
-                class="block w-full px-4 py-2 border rounded-md mb-2 focus:outline-none focus:border-blue-500">
-            <input type="datetime-local" id="meetingDateTime" required
-                class="block w-full px-4 py-2 border rounded-md mb-2 focus:outline-none focus:border-blue-500">
-            <input type="text" id="participants" placeholder="Participants" required
-                class="block w-full px-4 py-2 border rounded-md mb-2 focus:outline-none focus:border-blue-500">
-            <input type="text" id="location" placeholder="Location" required
-                class="block w-full px-4 py-2 border rounded-md mb-4 focus:outline-none focus:border-blue-500">
-            <button type="submit" id="scheduleMeeting"
-                class="w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded-md transition duration-300 hover:bg-blue-600">Schedule</button>
-        </form>
-        <div id="message" class="text-center mb-4"></div>
-        <hr class="mb-4">
-        <h2 class="text-xl font-semibold mb-2">Scheduled Meetings</h2>
-        <ul id="meetingsList" class="mb-4"></ul>
-        <button id="confirmRemove"
-            class="w-full bg-red-500 text-white font-semibold py-2 px-4 rounded-md transition duration-300 hover:bg-red-600"
-            style="display: none;">Confirm</button>
-    </div>
-    <script src="popup.js"></script>
+<body>
+  <div class="container">
+    <h1>Meeting Scheduler</h1>
+    <form id="meetingForm">
+      <input type="text" id="meetingTitle" placeholder="Meeting Title" required>
+      <input type="datetime-local" id="meetingDateTime" required>
+      <input type="text" id="participants" placeholder="Participants" required>
+      <input type="text" id="location" placeholder="Location" required>
+      <button type="submit" id="scheduleMeeting">Schedule</button>
+    </form>
+    <div id="message"></div>
+    <hr>
+    <h2>Scheduled Meetings</h2>
+    <ul id="meetingsList"></ul>
+    <button id="confirmRemove" style="display: none;">Confirm</button>
+  </div>
+  <script src="popup.js"></script>
 </body>
-
 </html>
